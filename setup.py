@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='data-loader-plugin',
-    version='0.0.1',
+    version='0.0.1.post1',
     license='MIT',
     description='Python plugin/extra to load data files from an external source (such as AWS S3) to a local directory',
     long_description_content_type='text/markdown',
