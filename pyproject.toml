@@ -1,6 +1,6 @@
 [project]
 name = "data_loader_plugin"
-version = "0.0.2"
+version = "0.0.2.dev0"
 requires-python = ">=3.11,<3.15"
 description =  "Python plugin/extra to load data files from an external source (such as AWS S3) to a local directory"
 readme = "README.md"
