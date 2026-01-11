@@ -149,4 +149,9 @@ bump-to-patch-version:
 	fi; \
 	echo "$$NEW_VERSION" > VERSION
 
+# Doc: https://packaging.python.org/en/latest/tutorials/packaging-projects/
+publish-pypitest:
+	@uv run python -mtwine upload --repository pypi-test dist/*
 
+publish-pypi:
+	@uv run python -mtwine upload --repository pypi dist/*
