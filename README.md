@@ -37,8 +37,8 @@ offering a few methods to download data files from AWS S3.
 * PyPi: https://pypi.org/project/data-loader-plugin/
   * Test PyPi: https://test.pypi.org/project/data-loader-plugin/
 
-* Read the Docs (RTD):
-  https://readthedocs.org/projects/data-loader-plugin/
+* (not workign meaningfully yet) Read the Docs (RTD):
+  https://python-plugin-data-loader.readthedocs.io/en/latest/
 
 # Installation
 
