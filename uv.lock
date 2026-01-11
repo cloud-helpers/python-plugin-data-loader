@@ -509,6 +509,14 @@ dev = [
     { name = "twine" },
     { name = "types-pyyaml" },
 ]
+docs = [
+    { name = "myst-parser" },
+    { name = "setuptools" },
+    { name = "sphinx" },
+    { name = "sphinx-rtd-theme" },
+    { name = "toml" },
+    { name = "types-pyyaml" },
+]
 lint = [
     { name = "ruff" },
 ]
@@ -536,6 +544,14 @@ dev = [
     { name = "sphinx-rtd-theme" },
     { name = "toml" },
     { name = "twine" },
+    { name = "types-pyyaml" },
+]
+docs = [
+    { name = "myst-parser" },
+    { name = "setuptools" },
+    { name = "sphinx" },
+    { name = "sphinx-rtd-theme" },
+    { name = "toml" },
     { name = "types-pyyaml" },
 ]
 lint = [{ name = "ruff" }]

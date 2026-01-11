@@ -42,6 +42,14 @@ dev = [
   "toml",
   "twine"
 ]
+docs = [
+  "myst-parser",
+  "types-PyYAML",
+  "setuptools",
+  "sphinx",
+  "sphinx-rtd-theme",
+  "toml"
+]
 lint = [
   "ruff"
 ]

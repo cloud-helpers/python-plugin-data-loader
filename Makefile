@@ -48,6 +48,9 @@ build: clean-dist
 	@uv build
 	@ls -lFh dist/
 
+doc:
+	@uv run --all-extras --group docs --link-mode=copy python -msphinx build docs docs/_build
+
 # --force-reinstall
 install-local: uninstall-local
 	$(eval PACKAGE_VERSION=$(shell cat VERSION))
