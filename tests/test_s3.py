@@ -6,7 +6,7 @@ from unittest import TestCase
 import boto3
 from boto3 import resource
 from data_loader_plugin.s3 import DataLoader
-from moto import mock_s3
+from moto import mock_aws
 
 
 class TestExternalDataLoad(TestCase):
@@ -29,7 +29,7 @@ class TestExternalDataLoad(TestCase):
         conn.create_bucket(Bucket=bucket)
         return bucket
 
-    @mock_s3
+    @mock_aws
     def test_files_are_copied(self):
         bucket = self._create_s3_bucket()
 
@@ -52,7 +52,7 @@ class TestExternalDataLoad(TestCase):
         rmtree(self.external_dir)
         rmtree(self.local_dir)
 
-    @mock_s3
+    @mock_aws
     def test_download_fails(self):
         bucket = self._create_s3_bucket()
 

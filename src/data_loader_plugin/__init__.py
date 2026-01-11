@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
 from .base import DataLoaderBase
 
-from pkg_resources import get_distribution, DistributionNotFound
-
 try:
+    import importlib.metadata as mtd
     # Change here if project is renamed and does not equal the package name
     dist_name = 'data-loader-plugin'
-    __version__ = get_distribution(dist_name).version
+    __version__ = mtd.version(dist_name)
+
 except DistributionNotFound:
     __version__ = 'unknown'
-finally:
-    del get_distribution, DistributionNotFound
+

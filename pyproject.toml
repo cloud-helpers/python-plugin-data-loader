@@ -1,0 +1,82 @@
+[project]
+name = "data_loader_plugin"
+version = "0.0.2"
+requires-python = ">=3.11,<3.15"
+description =  "Python plugin/extra to load data files from an external source (such as AWS S3) to a local directory"
+readme = "README.md"
+authors = [
+  {name = "Stanislav Khrapov", email = "khrapovs@gmail.com"},
+  {name = "Denis Arnaud", email = "denis.arnaud_pypi@m4x.org"},
+]
+license = "MIT"
+urls = {repository = "https://github.com/cloud-helpers/python-plugin-data-loader"}
+
+# DEPENDENCIES
+dependencies = [
+	"cloudpathlib[s3]",
+	"moto[ec2,s3,all]"
+]
+
+#[project.scripts]
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+  "packaging",
+  "coverage",
+  "httpx",
+  "mypy",
+  "myst-parser",
+  "pandera",
+  "pre-commit",
+  "types-PyYAML",
+  "pytest",
+  "pytest-cov",
+  "pytest-xdist",
+  "setuptools",
+  "sphinx",
+  "sphinx-rtd-theme",
+  "toml",
+  "twine"
+]
+lint = [
+  "ruff"
+]
+
+# CONFIGURATIONS
+
+[tool.coverage.run]
+branch = true
+source = [ "." ]
+
+[tool.coverage.report]
+omit = [ "tests/*" ]
+
+[tool.ruff]
+src = ["src"]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "Q", "I"]
+ignore = ["E203", "E501", "E712"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+ignore_missing_imports = true
+plugins = [ "pandera.mypy", "pydantic.mypy"]
+mypy_path = "src/"
+explicit_package_bases = true
+
+#[[tool.mypy.overrides]]
+#disable_error_code = [
+#    "call-overload",
+#	"import-untyped"
+#]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
