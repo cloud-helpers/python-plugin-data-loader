@@ -1,16 +1,14 @@
 #
-# File: https://github.com/cloud-helpers/python-plugin-data-loader/blob/master/.github/workflows/publish-pypi.yml
+# File: https://github.com/cloud-helpers/python-plugin-data-loader/blob/main/.github/workflows/publish-pypi.yml
 #
 # Doc:
 # * https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
-# *
 #
 
 name: Publish Python 🐍 distribution 📦 to PyPI and TestPyPI
 
-on:
-  push:
-  workflow_dispatch:
+# workflow_dispatch:
+on: push
 
 jobs:
   build:
