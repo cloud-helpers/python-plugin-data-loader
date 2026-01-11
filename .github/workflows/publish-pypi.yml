@@ -42,18 +42,18 @@ jobs:
       with:
         python-version-file: ".python-version"
 
-      # https://docs.astral.sh/uv/guides/integration/github/#installation
-      # https://github.com/astral-sh/setup-uv
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
+    # https://docs.astral.sh/uv/guides/integration/github/#installation
+    # https://github.com/astral-sh/setup-uv
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
 
-      - name: Install Python dependencies and build the Python wheel
-        run: |
-          make init
-          make update
-          make build
-          make tests
-        shell: bash
+    - name: Install Python dependencies and build the Python wheel
+      run: |
+        make init
+        make update
+        make build
+        make tests
+      shell: bash
 
     - name: Store the distribution packages
       uses: actions/upload-artifact@v5
